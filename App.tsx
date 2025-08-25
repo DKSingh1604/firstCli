@@ -1,24 +1,19 @@
-import React from 'react';
+/* eslint-disable react-native/no-inline-styles */
+import React, { useState } from 'react';
 import { View, Text, Button } from 'react-native';
-import CompanyData from './components/companyData';
-import type { FC } from 'react';
 
-const App: FC = () => {
-  let data = 10;
-
-  const fruit = (val: any) => {
-    console.warn(val);
-  };
+const App = () => {
+  const [name, setName] = useState('DevKaran');
+  let data = 'Sam';
+  function testName() {
+    setName('Dev Karan Singh');
+    data = 'Peter';
+  }
   return (
     <View>
-      <CompanyData />
+      <Text style={{ fontSize: 30 }}>{name}</Text>
       <Text style={{ fontSize: 30 }}>{data}</Text>
-      <Button
-        title="On Press"
-        color={'red'}
-        onPress={() => fruit('Hello DK')}
-      />
-      <Button title="On Press 2" color={'green'} onPress={() => fruit('Lio')} />
+      <Button title="Update Name" onPress={testName}></Button>
     </View>
   );
 };
