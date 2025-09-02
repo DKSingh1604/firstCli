@@ -1,19 +1,32 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { View, Text, Button } from 'react-native';
 
 const App = () => {
-  const [name, setName] = useState('DevKaran');
-  let data = 'Sam';
-  function testName() {
-    setName('Dev Karan Singh');
-    data = 'Peter';
-  }
+  const [name, setName] = useState('Peter');
+
   return (
-    <View>
-      <Text style={{ fontSize: 30 }}>{name}</Text>
-      <Text style={{ fontSize: 30 }}>{data}</Text>
-      <Button title="Update Name" onPress={testName}></Button>
+    <View
+      style={{
+        backgroundColor: 'red',
+        margin: 10,
+      }}
+    >
+      <Text style={{ fontSize: 30 }}>Props in React Native</Text>
+      <Button title="Update Props" onPress={() => setName('Dev Karan  ')} />
+      <User name={name} age={29} />
+    </View>
+  );
+};
+
+const User = (props: { name: string; age: number }) => {
+  console.log(props);
+  return (
+    <View style={{ backgroundColor: 'green', padding: 5 }}>
+      <Text style={{ fontSize: 30 }}>
+        {props.name + ' is ' + props.age + ' years old.'}
+      </Text>
     </View>
   );
 };
