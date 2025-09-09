@@ -7,17 +7,24 @@ const ExStyles = StyleSheet.create<{ textbox: TextStyle, button: TextStyle, item
         backgroundColor: 'white',
         // textAlign: 'center',
         padding: 20,
-        margin: 5,
+        margin: 10,
         borderRadius: 12,
         borderWidth: 3,
         borderColor: 'red',
+        flex: 2,
+        flexDirection: 'row',
+        // flexWrap: 'wrap'
     },
 
     button: {
         color: 'orange',
-        fontSize: 20,
+        fontSize: 23,
         padding: 15,
-        margin: 15
+        margin: 15,
+        borderColor: 'red',
+        borderWidth: 2,
+        borderRadius: 10,
+        textAlign: 'center'
     },
 
     items: {
@@ -31,13 +38,15 @@ const ExStyles = StyleSheet.create<{ textbox: TextStyle, button: TextStyle, item
         borderRadius: 10
     },
     gridElement: {
-        color: 'pink',
-        backgroundColor: 'green',
-        padding: 40,
+        padding: 10,
         margin: 10,
-        textAlign: 'left'
+        fontSize: 15,
+        textAlign: 'left',
+        borderRadius: 10,
+        borderColor: 'green',
+        borderWidth: 2
+    },
 
-    }
 });
 
 export default ExStyles;
