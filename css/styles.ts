@@ -31,7 +31,8 @@ const ExStyles = StyleSheet.create<{ textbox: TextStyle, button: TextStyle, item
         color: 'orange',
         fontSize: 20,
         padding: 10,
-        margin: 20,
+        margin: 10,
+        marginHorizontal: 40,
         textAlign: 'center',
         borderColor: 'red',
         borderWidth: 1.5,
@@ -44,7 +45,8 @@ const ExStyles = StyleSheet.create<{ textbox: TextStyle, button: TextStyle, item
         textAlign: 'left',
         borderRadius: 10,
         borderColor: 'green',
-        borderWidth: 2
+        borderWidth: 2,
+        backgroundColor: 'orange'
     },
 
 });
